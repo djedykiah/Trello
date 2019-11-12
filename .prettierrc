@@ -1,6 +1,13 @@
 {
-    "tabWidth": 4,
+    "eslintIntegration": true,
+    "parser": "flow",
     "singleQuote": true,
-    "prettier.eslintIntegration": true
-    
+    "stylelintIntegration": true,
+    "jsxBracketSameLine": true,
+    "tabWidth": 4,
+    "trailingComma": "es5",
+    "useTabs": true,
+    "jsxSingleQuote": true,
+    "bracketSpacing": true,
+    "printWidth": 80
 }

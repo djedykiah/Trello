@@ -16,7 +16,7 @@ import { initializeAsync } from '../store/reducers/ui/actions';
 import { Loading } from '../components';
 
 // Styles
-import 'antd/dist/antd.css';
+
 const GlobalStylePublic = createGlobalStyle`
     html {
         background-color: #fff;

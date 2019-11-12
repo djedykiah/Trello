@@ -90,7 +90,6 @@ const GlobalStyle = createGlobalStyle`
         font-size: 15px;
         line-height: 1.5;
         overflow-x: hidden;
-        background-color: #E1BEE7;
     } 
 
     html {
@@ -133,6 +132,10 @@ const GlobalStyle = createGlobalStyle`
         color: inherit; 
         text-decoration:  none
     }
+    #app {
+        padding: 15px;
+        background-color: #E1BEE7;
+        height: 100%;
     }
 `;
 

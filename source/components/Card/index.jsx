@@ -1,13 +1,18 @@
+//Core
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card as AntdCard } from 'antd';
 
-const Card = ({ text, title }) => {
-    console.log(title);
+//Styles
+import 'antd/lib/card/style/css';
 
+//Components
+import { Typography } from 'components';
+
+const Card = ({ text, title }) => {
     return (
         <AntdCard style = { { width: 300 } } title = { title }>
-            <p>{text}</p>
+            <Typography size = 'plain'>{text}</Typography>
         </AntdCard>
     );
 };
