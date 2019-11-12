@@ -89,7 +89,8 @@ const GlobalStyle = createGlobalStyle`
         font-family: var(--primaryFont);
         font-size: 15px;
         line-height: 1.5;
-        overflow-x: hidden
+        overflow-x: hidden;
+        background-color: #E1BEE7;
     } 
 
     html {
