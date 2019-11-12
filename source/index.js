@@ -14,6 +14,8 @@ import App from './app';
 
 // Styles
 import Reset from 'styled-reset';
+//Styles
+import 'antd/dist/antd.css';
 
 // Store
 import { store, history, persistor } from './store';

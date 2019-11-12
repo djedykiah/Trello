@@ -3,9 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Card as AntdCard } from 'antd';
 
-//Styles
-import 'antd/lib/card/style/css';
-
 //Components
 import { Typography } from 'components';
 

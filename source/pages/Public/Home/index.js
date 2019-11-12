@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 import { setUserLanguage } from 'store/reducers/ui/actions';
 import List from 'components/List/index.jsx';
+import ActionButton from 'components/ActionButton/ActionButton.jsx';
 
 const HomeContainer = ({ className }) => {
     const list = useSelector((state) => state.list);
@@ -21,6 +22,7 @@ const HomeContainer = ({ className }) => {
                     />
                 );
             })}
+            <ActionButton list />
         </div>
     );
 };

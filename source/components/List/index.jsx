@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import { Heading } from 'components';
 import Card from '../Card/index.jsx';
+import ActionButton from 'components/ActionButton/ActionButton.jsx';
 
 const ListContainer = ({ title, cards, className }) => {
     return (
@@ -22,6 +23,7 @@ const ListContainer = ({ title, cards, className }) => {
                     </div>
                 );
             })}
+            <ActionButton />
         </div>
     );
 };
@@ -30,7 +32,6 @@ const List = styled(ListContainer)`
   display: block;
   .head {
       text-align: center;
-      padding-top: 15px;
   }
   .card {
       margin-bottom: 15px;
