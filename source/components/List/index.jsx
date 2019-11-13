@@ -6,7 +6,7 @@ import { Heading } from 'components';
 import Card from '../Card/index.jsx';
 import ActionButton from 'components/ActionButton/ActionButton.jsx';
 
-const ListContainer = ({ title, cards, className }) => {
+const ListContainer = ({ title, cards, className, index: ListIndex }) => {
     return (
         <div className = { className }>
             <div className = 'head'>
@@ -18,12 +18,11 @@ const ListContainer = ({ title, cards, className }) => {
                     <div className = 'card' key = { Number(new Date().getTime()) + index }>
                         <Card
                             text = { card.text }
-                            title = { card.title }
                         />
                     </div>
                 );
             })}
-            <ActionButton />
+            <ActionButton index = { ListIndex } />
         </div>
     );
 };

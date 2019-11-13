@@ -238,7 +238,7 @@ rules:
   react/no-direct-mutation-state: 1
   react/no-find-dom-node: 1
   react/no-is-mounted: 1
-  react/no-multi-comp: 1
+  react/no-multi-comp: 0
   react/no-render-return-value: 1
   react/no-set-state: 0
   react/no-string-refs: 1

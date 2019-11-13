@@ -6,9 +6,9 @@ import { Card as AntdCard } from 'antd';
 //Components
 import { Typography } from 'components';
 
-const Card = ({ text, title }) => {
+const Card = ({ text }) => {
     return (
-        <AntdCard style = { { width: 300 } } title = { title }>
+        <AntdCard style = { { width: 300 } }>
             <Typography size = 'plain'>{text}</Typography>
         </AntdCard>
     );

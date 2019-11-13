@@ -17,6 +17,7 @@ const HomeContainer = ({ className }) => {
                     <List
                         cards = { listItem.cards }
                         className = 'list-card'
+                        index = { index }
                         key = { Number(new Date().getTime()) + index }
                         title = { listItem.title }
                     />
