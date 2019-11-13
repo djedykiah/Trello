@@ -17,6 +17,9 @@ const ListContainer = ({ title, cards, className, index: ListIndex }) => {
                 return (
                     <div className = 'card' key = { Number(new Date().getTime()) + index }>
                         <Card
+                            cardIndex = { index }
+                            id = { card.id }
+                            listIndex = { ListIndex }
                             text = { card.text }
                         />
                     </div>

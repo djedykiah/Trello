@@ -68,6 +68,16 @@ export const listReducer = (state = initialState, action) => {
                         id:   cardID,
                     }
                 ]);
+        case types.REMOVE_CARD:
+            console.log(...state.get(action.payload.listIndex).cards.splice(0, action.payload.cardIndex));
+            console.log(...state.get(action.payload.listIndex).cards.splice(action.payload.cardIndex + 1));
+
+            return state.setIn([ action.payload.listIndex, 'cards' ],
+                [
+                    ...state.get(action.payload.listIndex).cards.splice(0, action.payload.cardIndex),
+                    ...state.get(action.payload.listIndex).cards.splice(action.payload.cardIndex + 1)
+                ]
+            );
         default:
             return state;
     }
