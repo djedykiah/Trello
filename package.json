@@ -51,6 +51,7 @@
         "moment": "2.22.2",
         "object-fit-images": "^3.2.4",
         "react": "^16.8.6",
+        "react-beautiful-dnd": "^12.1.1",
         "react-dom": "^16.8.6",
         "react-hot-loader": "^4.8.3",
         "react-notification-system-redux": "^2.0.0",

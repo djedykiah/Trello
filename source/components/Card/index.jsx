@@ -3,6 +3,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Card as AntdCard, Icon } from 'antd';
+import { Draggable } from 'react-beautiful-dnd';
 
 //Styles
 import styled from 'styled-components';
@@ -13,7 +14,7 @@ import { Typography } from 'components';
 //Actions
 import { removeCard } from 'store/reducers/list/actions';
 
-const CardContainer = ({ text, className, listIndex, cardIndex }) => {
+const CardContainer = ({ text, className, id, listIndex, cardIndex }) => {
     const dispatch = useDispatch();
 
     const _handleDelete = () => {
@@ -21,10 +22,17 @@ const CardContainer = ({ text, className, listIndex, cardIndex }) => {
     };
 
     return (
-        <AntdCard className = { className }>
-            <Typography size = 'plain'>{text}</Typography>
-            <Icon className = 'icon-delete' type = 'delete' onClick = { _handleDelete } />
-        </AntdCard>
+        <Draggable draggableId = { String(id) } index = { cardIndex }>
+            {(provided) => (
+                <div { ...provided.draggableProps } { ...provided.dragHandleProps } ref = { provided.innerRef }>
+                    <AntdCard className = { className }>
+                        <Typography size = 'plain'>{text}</Typography>
+                        <Icon className = 'icon-delete' type = 'delete' onClick = { _handleDelete } />
+                    </AntdCard>
+                </div>
+            )}
+
+        </Draggable>
     );
 };
 

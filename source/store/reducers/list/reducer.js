@@ -6,42 +6,42 @@ import { types } from './types';
 
 let listID = 2;
 
-let cardID = 2;
+let cardID = 6;
 
 const initialState = List([
     {
         title: 'title',
-        id:    0,
+        id:    `listID-${0}`,
         cards: [
             {
                 text: 'text1',
-                id:   0,
+                id:   `cardID-${0}`,
             },
             {
                 text: 'text2',
-                id:   1,
+                id:   `cardID-${1}`,
             },
             {
                 text: 'text3',
-                id:   2,
+                id:   `cardID-${2}`,
             }
         ],
     },
     {
         title: 'title2',
-        id:    1,
+        id:    `listID-${1}`,
         cards: [
             {
                 text: 'text1',
-                id:   0,
+                id:   `cardID-${3}`,
             },
             {
                 text: 'text2',
-                id:   1,
+                id:   `cardID-${4}`,
             },
             {
                 text: 'text3',
-                id:   2,
+                id:   `cardID-${5}`,
             }
         ],
     }
@@ -55,7 +55,7 @@ export const listReducer = (state = initialState, action) => {
 
             return state.push({
                 title: action.payload,
-                id:    listID,
+                id:    `listID-${listID}`,
                 cards: [],
             });
         case types.ADD_CARD:
@@ -65,7 +65,7 @@ export const listReducer = (state = initialState, action) => {
                 [ ...state.get(action.payload.index).cards,
                     {
                         text: action.payload.data,
-                        id:   cardID,
+                        id:   `listID-${cardID}`,
                     }
                 ]);
         case types.REMOVE_CARD:
