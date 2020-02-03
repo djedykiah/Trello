@@ -28,7 +28,7 @@ const ListContainer = ({
 
                     {cards.map((card, index) => {
                         return (
-                            <div className = 'card' key = { Number(new Date().getTime()) + index }>
+                            <div className = 'card' key = { Number(new Date().getTime()) + index + 1 }>
                                 <Card
                                     cardIndex = { index }
                                     id = { card.id }
