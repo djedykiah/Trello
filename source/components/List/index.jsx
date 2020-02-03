@@ -23,7 +23,9 @@ const ListContainer = ({
                     ref = { provided.innerRef }>
 
                     <div className = 'head'>
-                        <Heading as = 'h3' size = '3'>{title}</Heading>
+                        <Heading as = 'h3' size = '3'>
+                            {title}
+                        </Heading>
                     </div>
 
                     {cards.map((card, index) => {
