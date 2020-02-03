@@ -52,7 +52,7 @@ const List = styled(ListContainer)`
       text-align: center;
   }
   .card {
-      margin-bottom: 15px;
+      margin-bottom: 12px;
   }
 `;
 
